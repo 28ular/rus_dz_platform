@@ -16,6 +16,8 @@ export const MainPageCard = ({ d }) => {
         <div className="card">
             <div className="card_header">
                 <span className="id">#{d?.id}</span>
+                <span style={{ color: 'green' }}  className="provereno">проверено</span>
+
             </div>
             <h2 className="title">{d?.title}</h2>
             <p className="description">{d?.description}</p>
@@ -33,7 +35,6 @@ export const MainPageCard = ({ d }) => {
                     <>
                     <div className="card_modal">
                         <div className="header_prov">
-                            <span style={{ color: 'green' }}  className="provereno">проверено</span>
                             <button onClick={close}>❌</button>
                         </div>
                         <hr/>
