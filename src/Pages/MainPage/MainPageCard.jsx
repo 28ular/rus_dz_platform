@@ -1,6 +1,11 @@
 import './main.css'
+import data from '../../db/dz.json'
+import {useState} from "react";
 
 export const MainPageCard = ({ d }) => {
+
+    const isPust = !d.image || d.image === ''
+
     return (
         <div className="card">
             <div className="card_header">
@@ -11,7 +16,7 @@ export const MainPageCard = ({ d }) => {
             <p className="description">{d?.description}</p>
             <div className="card_footer">
                 <span className="deadline">📅 {d?.deadline}</span>
-                <button className="buttons" onClick={() => window.open(d.image, "_blank")}>открыть файл</button>
+                <button disabled={isPust} className={ isPust ? 'pust' : 'buttons' } onClick={() => window.open(d.image, "_blank")}>открыть файл</button>
             </div>
         </div>
     );

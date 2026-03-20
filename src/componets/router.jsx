@@ -1,29 +1,26 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createHashRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Layout } from "./Layout.jsx";
 import { Auth } from "./Auth.jsx";
 import { MainPageList } from "../Pages/MainPage/MainPageList.jsx";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
-        // По умолчанию редиректим с корня на /auth
         path: "/",
-        element: <Navigate to="/auth" replace />,
+        element: <Navigate to="/auth" replace />
     },
     {
         path: "/auth",
-        element: <Auth />,
+        element: <Auth />
     },
     {
-        // Защищённые маршруты
         path: "/main",
         element: <Layout />,
         children: [
-            { path: "", element: <MainPageList /> },
-        ],
+            { path: "", element: <MainPageList /> }
+        ]
     },
     {
-        // Все остальные пути на /auth
         path: "*",
-        element: <Navigate to="/auth" replace />,
-    },
+        element: <Navigate to="/auth" replace />
+    }
 ]);

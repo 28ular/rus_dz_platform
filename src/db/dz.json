@@ -3,10 +3,10 @@
     {
       "id": 1,
       "title": "HTML Basics",
-      "description": "Создать базовую HTML страницу с заголовком, параграфом и изображением.",
+      "description": "создать html и сделать бургер прайс с точками, сделать кнопку что бы при клике тебя перекидовало на видос любой ",
       "grade": 0,
-      "deadline": "2026-03-25",
-      "image": "https://youtu.be/2IGwkJDcIk8?list=RD2IGwkJDcIk8",
+      "deadline": "1:00",
+      "image": "",
       "completed": false
     }
   ]
