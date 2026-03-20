@@ -1,0 +1,83 @@
+.h1_ {
+    position: absolute;
+    top: 50px;
+    left: 47%;
+}
+
+
+.card {
+    width: 520px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #1e1e2f;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    .title {
+        color: red;
+    }
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.id {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.grade {
+    background: #2ecc71;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deadline {
+    font-size: 13px;
+    color: #ff7675;
+}
+
+.file {
+    font-size: 12px;
+    color: #fff;
+}
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mains {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+}

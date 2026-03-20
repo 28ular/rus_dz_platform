@@ -1,0 +1,13 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "HTML Basics",
+      "description": "Создать базовую HTML страницу с заголовком, параграфом и изображением.",
+      "grade": 0,
+      "deadline": "2026-03-25",
+      "image": "https://youtu.be/2IGwkJDcIk8?list=RD2IGwkJDcIk8",
+      "completed": false
+    }
+  ]
+}
