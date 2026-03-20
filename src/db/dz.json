@@ -4,10 +4,11 @@
       "id": 1,
       "title": "HTML Basics",
       "description": "создать html и сделать бургер прайс с точками, сделать кнопку что бы при клике тебя перекидовало на видос любой ",
-      "grade": 0,
+      "grade": 10,
       "deadline": "1:00",
-      "image": "",
-      "completed": false
+      "image": "asd",
+      "completed": true,
+      "prov": "все норм но ты меня забайтила дура тупая я тебя убью"
     }
   ]
 }
