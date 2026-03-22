@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "первый урок знакомство со всеми, знакомство с html",
+      "url": "https://youtu.be/GN--4-zCA2I",
+      "description": "знакомство с html  знакомство со всеми"
+    },
+    {
+      "id": 2,
+      "title": "знакомство с style css и приоретентностью",
+      "url": "https://youtu.be/WbhphLW2Oyc",
+      "description": "CSS3, «color», «font», «width», «text-align», приоритетность"
+    },
+    {
+      "id": 3,
+      "title": "работа с style css | html ",
+      "url": "https://youtu.be/AtI-MN4SPME",
+      "description": "«position», em - rem - % - px, «margin», «padding», «border», «border-radius»"
+    },
+    {
+      "id": 4,
+      "title": "задний фон, флекс гибкая верстка, Тест_1",
+      "url": "https://youtu.be/RJ0ssSerYSg",
+      "description": "Background, Flex, Test #1"
+    },
+    {
+      "id": 5,
+      "title": "Практика создание проекта, использование все вчто проходили",
+      "url": "https://youtu.be/B2SicQwh520",
+      "description": "Практика"
+    }
+  ]
+}

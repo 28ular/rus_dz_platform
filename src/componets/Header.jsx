@@ -8,14 +8,10 @@ export const Header = () => {
         <>
             <div className="header">
                 <ul className="list">
-                    <li className="links">
-                        <li>Main</li>
-                        <li>About</li>
-                    </li>
-                    <button onClick={() => navigate('/auth')} className="header_btn">exit</button>
+                    <li onClick={() => navigate('/main/videos')}>videos</li>
+                    <li onClick={() => navigate('/main')}>Д\З</li>
                 </ul>
             </div>
-
         </>
     )
 }

@@ -1,10 +1,13 @@
 import './main.css'
 import data from '../../db/dz.json'
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export const MainPageCard = ({ d }) => {
 
     const isPust = !d.image || d.image === ''
+
+    const navigate = useNavigate()
 
     const [modal, setModal] = useState(false)
 
@@ -39,7 +42,8 @@ export const MainPageCard = ({ d }) => {
                         </div>
                         <hr/>
                         <p style={{ color: 'grey' , marginBottom: 10 }}>{ d.prov }</p>
-                        <span  className="grade">{d?.grade}/10</span>
+                        <span
+                            className="grade">{`проверено:${d?.grade}/10 баллов `}</span>
                     </div>
                     </>
                 )
