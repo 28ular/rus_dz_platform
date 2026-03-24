@@ -22,6 +22,24 @@ box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     bottom: 0;
     left: 108px;
 }
+.next {
+    animation: size 1s ease-in-out;
+}
+.prev {
+    animation: sizes 1s ease-in-out;
+}
+@keyframes size {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes sizes {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1) rotate(-3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
 .title {
     width: 100%;
     text-wrap: wrap;

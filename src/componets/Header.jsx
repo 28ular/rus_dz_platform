@@ -10,6 +10,9 @@ export const Header = () => {
                 <ul className="list">
                     <li onClick={() => navigate('/main/videos')}>videos</li>
                     <li onClick={() => navigate('/main')}>Д\З</li>
+                    <li className="btn">
+                        <button className="header_btn" onClick={() => navigate('/auth')}>❌</button>
+                    </li>
                 </ul>
             </div>
         </>

@@ -8,6 +8,8 @@ export const VideoList = () => {
 
     const [index , setIndex] = useState(0)
 
+    const [animation , setAnimation] = useState(false)
+
     const data = videos.items
 
     const getEmbedUrl = (url) => {
@@ -16,6 +18,7 @@ export const VideoList = () => {
     }
 
     const nextSlide = () => {
+        setAnimation(true)
         if (index === data.length - 1) {
             setIndex(0)
         }else {
@@ -24,6 +27,7 @@ export const VideoList = () => {
     }
 
     const prevSlide = () => {
+        setAnimation(false)
         if (index === 0) {
             setIndex(data.length - 1)
         }else {
@@ -44,7 +48,10 @@ export const VideoList = () => {
                     <div className={cls.title}>
                         {data[index].title}
                     </div>
-                    <div className={cls.videos}>
+                    <div  className={ `
+                    ${cls.videos}
+                    ${animation ?  cls.next : cls.prev}
+                    ` } key={index}>
                         <iframe
                             width="700"
                             height="400"

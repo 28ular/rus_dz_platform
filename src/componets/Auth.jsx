@@ -8,9 +8,10 @@ export const Auth = () => {
     const [password, setPassword] = useState('')
     const [name,  setName] = useState('')
     const navigate = useNavigate();
-
+    const  [ oplata , setOplata ] = useState(false)
     const passwords = ['king_nasir' , 'ular28']
 
+    const image = 'https://ibb.co/jPyqpJ9R'
     const auth = () => {
         if ( name.trim() === '' || password.trim() === '' ) {
             toast.warning('ошибка: заполните все поля')
@@ -29,27 +30,34 @@ export const Auth = () => {
             <ToastContainer/>
             <div className="auth_page">
             <div className="auth_wrapper">
-            <h1>Welcome to Ular Platform!</h1>
-                <p>Enter your Name and Password, to verify</p>
-                <div className="inputs">
-                    <input
-                        className="inp"
-                        type="text"
-                        name=" password "
-                        placeholder="Name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    <input
-                        className="inp"
-                        type="password"
-                        name=" password "
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <button  onClick={auth} className="buttons">sign in</button>
+            <h1>{ oplata ? 'Welcome to Ular Platform!' : 'оплатите' }</h1>
+                <p>{ oplata ? 'Enter your Name and Password, to verify' : 'вы оплачиваете не из за того что улару жалко а вы платите за его огромный труд' }</p>
+                { oplata && (
+                    <div className="inputs">
+                        <input
+                            className="inp"
+                            type="text"
+                            name=" password "
+                            placeholder="Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <input
+                            className="inp"
+                            type="password"
+                            name=" password "
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                ) }
+                { !oplata &&  (
+                    <button   onClick={() => window.open(image, "_blank")}  className="buttons">оплатить</button>
+                ) }
+                { oplata && (
+                    <button onClick={auth} className="buttons">войти</button>
+                ) }
             </div>
             </div>
         </>
