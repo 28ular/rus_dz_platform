@@ -11,15 +11,12 @@ export const MainPageCard = ({ d }) => {
 
     const [modal, setModal] = useState(false)
 
-    const open = () => setModal(true)
-    const close = () => setModal(false)
-
     return (
         <>
         <div className="card">
             <div className="card_header">
                 <span className="id">#{d?.id}</span>
-                <span style={{ color: 'green' }}  className="provereno">проверено</span>
+                <span style={{ color: 'green' }}  className={ d.completed ? 'проверено' : 'neProvereno' }>{ d?.completed ? 'проверено': 'не проверено' }</span>
 
             </div>
             <h2 className="title">{d?.title}</h2>
@@ -28,7 +25,7 @@ export const MainPageCard = ({ d }) => {
                 <span className="deadline">📅 {d?.deadline}</span>
                 {
                     d?.completed && (
-                        <button onClick={open} className="buttonss">посмотреть резул</button>
+                        <button onClick={() => setModal(prev => !prev)} className="buttonss">{ modal ? 'закрыть' : 'посмотреть резул' }</button>
                     )
                 }
                 <button disabled={isPust} className={ isPust ? 'pust' : 'buttons' } onClick={() => window.open(d.image, "_blank")}>открыть файл</button>
@@ -37,9 +34,6 @@ export const MainPageCard = ({ d }) => {
                 modal && (
                     <>
                     <div className="card_modal">
-                        <div className="header_prov">
-                            <button onClick={close}>❌</button>
-                        </div>
                         <hr/>
                         <p style={{ color: 'grey' , marginBottom: 10 }}>{ d.prov }</p>
                         <span

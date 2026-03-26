@@ -1,14 +1,15 @@
 import './auth.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {toast, ToastContainer} from "react-toastify";
 import {useNavigate} from "react-router-dom";
+import {MainPageList} from "../Pages/MainPage/MainPageList.jsx";
 
 export const Auth = () => {
 
     const [password, setPassword] = useState('')
     const [name,  setName] = useState('')
     const navigate = useNavigate();
-    const  [ oplata , setOplata ] = useState(false)
+    const  [ oplata , setOplata ] = useState(true)
     const passwords = ['king_nasir' , 'ular28']
 
     const image = 'https://ibb.co/jPyqpJ9R'
@@ -24,8 +25,7 @@ export const Auth = () => {
             return
         }
     }
-
-    return (
+   return (
         <>
             <ToastContainer/>
             <div className="auth_page">
@@ -56,7 +56,7 @@ export const Auth = () => {
                     <button   onClick={() => window.open(image, "_blank")}  className="buttons">оплатить</button>
                 ) }
                 { oplata && (
-                    <button onClick={auth} className="buttons">войти</button>
+                    <button onClick={auth } className="buttons">войти</button>
                 ) }
             </div>
             </div>

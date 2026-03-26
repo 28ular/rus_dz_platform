@@ -1,7 +1,12 @@
 import data from '../../db/dz.json'
 import {MainPageCard} from "./MainPageCard.jsx";
+import {useEffect} from "react";
 
-export const MainPageList = () => {
+
+export const MainPageList = ({ name }) => {
+
+
+
     return (
         <>
             <div className="mains">
