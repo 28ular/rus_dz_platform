@@ -10,7 +10,7 @@ export const Auth = () => {
     const [name,  setName] = useState('')
     const navigate = useNavigate();
     const  [ oplata , setOplata ] = useState(true)
-    const passwords = ['king_nasir' , 'ular28']
+    const passwords = ['king_nasir' , 'ular28', 'imran123']
 
     const image = 'https://ibb.co/jPyqpJ9R'
     const auth = () => {
